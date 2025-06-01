@@ -1,0 +1,40 @@
+# Version control
+.git
+.gitignore
+
+# Dependencies
+node_modules
+
+# IDE
+.cursor
+.vscode
+.idea
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Temporary directories
+tmp
+temp
+
+# Build output
+dist
+build
+
+# Environment files (should be set during runtime)
+.env
+.env.local
+.env.*.local 
