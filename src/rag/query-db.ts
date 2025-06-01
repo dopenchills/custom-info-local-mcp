@@ -1,5 +1,5 @@
 import { embed } from "ai";
-import { INDEX_NAME, VECTOR_CONFIG, EMBEDDING_MODEL, createVectorStore } from './config.js'
+import { INDEX_NAME, VECTOR_CONFIG, EMBEDDING_MODEL, createVectorStore } from './config'
 
 export async function queryDb(query: string, topK: number = VECTOR_CONFIG.defaultTopK) {
   const { embedding } = await embed({

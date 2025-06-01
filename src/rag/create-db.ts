@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import { glob } from 'fs/promises'
 import * as path from 'path'
 import { embedMany } from "ai";
-import { INDEX_NAME, VECTOR_CONFIG, EMBEDDING_MODEL, createVectorStore } from './config.js'
+import { INDEX_NAME, VECTOR_CONFIG, EMBEDDING_MODEL, createVectorStore } from './config'
 
 export async function createDb(patterns?: string[]) {
   const filePatterns = patterns && patterns.length > 0 ? patterns : []

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander'
-import { createDb } from '../rag/create-db.js'
-import { queryDb } from '../rag/query-db.js'
+import { createDb } from '../rag/create-db'
+import { queryDb } from '../rag/query-db'
 
 const program = new Command()
 
