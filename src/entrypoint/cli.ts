@@ -33,12 +33,15 @@ program
   .option('-k, --top-k <number>', 'Number of top results to return', '5')
   .action(async (query, options) => {
     try {
-      const topK = parseInt(options.topK)
+      const topK = parseInt(options.topK, 10)
+      if (!Number.isInteger(topK) || topK <= 0) {
+        throw new Error('The value for --top-k must be a positive integer')
+      }
       console.log('🚀 Starting query...')
       const results = await queryDb(query, topK)
       
       console.log('\n📋 Results:')
-      console.log('=' .repeat(50))
+      console.log('='.repeat(50))
       
       results.forEach((result, index) => {
         console.log(`\n📄 Result ${index + 1} (Score: ${result.score?.toFixed(4) || 'N/A'})`)
