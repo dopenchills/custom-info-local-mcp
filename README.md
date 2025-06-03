@@ -60,7 +60,7 @@ docker build -t custom-info-local-mcp .
   "mcpServers": {
     "custom-info": {
       "command": "docker",
-      "args": ["run", "--rm", "-i","custom-info-local-mcp"],
+      "args": ["run", "--rm", "-i", "custom-info-local-mcp"]
     }
   }
 }
